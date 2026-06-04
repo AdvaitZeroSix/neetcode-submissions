@@ -1,0 +1,14 @@
+class Solution {
+    public boolean hasDuplicate(int[] nums) {
+        HashMap<Integer,Integer> numbers = new HashMap<>();
+        for (int i : nums){
+            if(numbers.containsKey(i)){
+                return true;
+            }
+            else{
+                numbers.put(i,1);
+            }
+        }
+        return false;
+    }
+}
